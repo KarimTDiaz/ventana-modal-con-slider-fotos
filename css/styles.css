@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: beige;
+}
+
+.switch-theme,
+.social {
+    width: 20%;
+    height: 40%;
+    background-color: bisque;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.main {
+    min-height: calc(100vh - 200px);
+    background-color: blanchedalmond;
+    padding: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.gallery-item{
+    overflow: hidden;
+    border-radius: 20px;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: beige;
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / .5);
+    transform: scale(0);
+    transition-duration: 1s;
+}
+
+.modal--show {
+    transform: scale(1);
+    transition-duration: 1s;
+}
+
+.modal__image-container {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__image {
+    width: 40%;
+    transition: opacity 0.6s;
+    border-radius: 20px;
+}
+
+.icon {
+    width: 3%;
+    min-width: 35px;
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+
+.icon:hover{
+    transform: scale(1.3);
+    transition-duration: 0.5s;
+}
+
+.icon__arrow-left {
+    top: 50%;
+    left: 4%;
+}
+
+.icon__arrow-right {
+    top: 50%;
+    right: 4%;
+}
+
+.image {
+}
+
+.image:hover{
+    transform: scale(1.5);
+    transition-duration: 0.6s;
+}
+
+.modal__image--fade-in {
+    opacity: 1;
+}
+
+.modal__image--fade-out {
+    opacity: 0;
+}
